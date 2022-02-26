@@ -57,15 +57,9 @@ public class FileUser {
 	}
 
 	public void displayFiles() {
-		File folder = new File(userName);
-		File[] files = folder.listFiles();
-
+		
 		System.out.println("Below files are present : ");
-		// iterate the files
-		for (File file : files) {
-			System.out.println(file.getName());
-		}
-		// System.out.println(userfiles);
+		
 		userfiles.sort(null);
 		Iterator<String> iterator = userfiles.iterator();
 		while (iterator.hasNext()) {
@@ -97,7 +91,7 @@ public class FileUser {
 		String fileName = input.nextLine();
 		String filePath = userName + "//" + fileName + ".txt";
 		userfiles.add(fileName);// Add file to the array list
-		System.out.println(userfiles);
+		//System.out.println(userfiles);
 		try {
 			File newFile = new File(filePath);
 			// if (!newFile.exists())
